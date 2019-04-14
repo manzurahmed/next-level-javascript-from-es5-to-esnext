@@ -291,9 +291,13 @@ Array এর ক্ষেত্রে Rest এর ব্যবহারঃ
 const [first, second, ...others] = [1,2,3,4,5,6,7];
 console.log(first, second);
 console.log(others);
+
+**Output:**
+1 2
+[3, 4, 5, 6, 7]
 ```
 
-Array  ক্ষেত্রে Rest ব্যবহারে Array রিটার্ন করে।
+Array এর ক্ষেত্রে Rest ব্যবহারে Array রিটার্ন করে।
 
 Object এর ক্ষেত্রে Rest এর ব্যবহারঃ
 ```js
@@ -305,6 +309,14 @@ const {c, r, ...others } = {
 };
 console.log(c, r);
 console.log(others);
+
+**Output:**
+"Dhaka" "Rajshahi"
+
+Object {
+  j: "Jessore",
+  k: "Khulna"
+}
 ```
 
 Object এর ক্ষেত্রে Rest ব্যবহারে Object রিটার্ন করে।
