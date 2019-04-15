@@ -1,7 +1,7 @@
 JavaScript এর এই কোর্সটি Udemy এর একটি ফ্রি কোর্স। এর মেন্টর ছিলেন Md. Al-amin Nowshad। কোর্সটির ভাষা ছিল বাংলা। মডার্ন জাভাস্ক্রিপ্ট শিখবার জন্য এই কোর্সটি একটি সুন্দর প্রারম্ভিক স্টাডি মেটেরিয়াল হতে পারে। যারা ReactJS, VueJS বা AngularJS শুরু করতে চাচ্ছেন, তাদের জন্য জাভাস্ক্রিপ্টের এই মডার্ন ফিচারগুলো জানা থাকা আবশ্যক।
 
-Udemy Course Link: https://www.udemy.com/course/2287987
-YouTube Playlist: https://www.youtube.com/playlist?list=PLN_rT79fotRRzQl0uQjQbK87pfWj16abq&fbclid=IwAR11yxfwwGgJE7jR37rXzKAt39Fbr07eHpOSyf6rmFgR7EsxZGnz66zzLqk
+- Udemy Course Link: https://www.udemy.com/course/2287987
+- YouTube Playlist: https://www.youtube.com/playlist?list=PLN_rT79fotRRzQl0uQjQbK87pfWj16abq&fbclid=IwAR11yxfwwGgJE7jR37rXzKAt39Fbr07eHpOSyf6rmFgR7EsxZGnz66zzLqk
 
 
 # 4. Arrow Function
