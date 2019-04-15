@@ -363,3 +363,165 @@ Set কে destructure ও করা যায়। যেমনঃ
 const arr = [...s];
 console.log(arr);
 ```
+
+# 14. ARRAY INCLUDES
+
+এ্যারেতে কোন ইলিমেন্ট আছে কিনা চেক করে দেখার জন্য array.includes মেথড ব্যবহার করা হয়।
+
+```js
+const arr = [4,5,6,7,8, 'test', 'boom'];
+console.log(arr.includes('test'));
+```
+
+# 15. EXPONENTIATION OPERATOR
+
+এটি ES6 (2016) এর নতুন একটি ফিচার। আগে ম্যাথ অপারেশনের জন্য Math লাইব্রেরী ব্যবহার করতে হত।
+
+```js
+// Before ES6
+console.log(Math.pow(2, 4));
+console.log(2 ** 4);
+```
+
+# 16. ASYNC FUNCTION
+
+যে সমস্ত কাজে একটু বেশী সময় লাগে সে সমস্ত ক্ষেত্রে মডার্ন জাভাস্ক্রিপ্টের আগে কলব্যাক ফাংশন ব্যবহার করা হত। এর পর এলো Promise। মডার্ন জাভাস্ক্রিপ্টে এসেছে async। এই async ফাংশন আন্ডার দ্য হুড promise ব্যবহার করে।
+
+```
+const doSomethingAsync = () => {
+	return new Promise(resolve => {
+		setTimeout(() => resolve('I did something.'), 3000)
+	});
+}
+
+const client = async () => {
+	console.log('Now wait 3 seconds');
+	const res = await doSomethingAsync();
+	console.log(res);
+}
+// Call the method
+client();
+```
+
+# 17. STRING PADDING
+
+কোন স্ট্রিং এর আগে বা পরে কোন নির্দিষ্ট স্ট্রিং দিয়ে প্যাড করার জন্য .padStart এবং padEnd ফাংশন ব্যবহার করা হয়।
+
+```js
+"Thank".padStart(8)
+"Thank".padEnd(15, '*')
+```
+
+# 18. OBJECT METHODS
+
+এই ভিডিওতে object.entries এবং object.values নিয়ে আলোচনা করা হয়েছে।
+
+```js
+const obj = {
+	a: 'Dhaka',
+	b: 'Rajshahi',
+	c: 'Khulna'
+}
+
+console.log(Object.values(obj));
+
+Output:
+Array(3) [
+  "Dhaka",
+  "Rajshahi",
+  "Khulna"
+]
+```
+
+Object.entries এ অবজেক্টের key এবং value কে Array আকারে রিটার্ন করে থাকে।
+
+```js
+const obj = {
+	a: 'Dhaka',
+	b: 'Rajshahi',
+	c: 'Khulna'
+}
+
+console.log(Object.entries(obj));
+
+Output:
+Array(3) [
+  [
+    "a",
+    "Dhaka"
+  ],
+  [
+    "b",
+    "Rajshahi"
+  ],
+  [
+    "c",
+    "Khulna"
+  ]
+]
+```
+
+# 19. ARRAY FLAT
+
+Array flat ফাংশন দিয়ে ১ লেভেলের এ্যারেকে সিম্পল এ্যারেতে কনভার্ট করতে এটি ব্যবহার করা হয়।
+
+```js
+const arr = [1,2,[3,4],5];
+console.log(arr.flat());
+
+Output:
+Array(5) [
+  1,
+  2,
+  3,
+  4,
+  5
+]
+```
+
+# 20. OPTIONAL CATCH BINDING
+
+জাভাস্ক্রিপ্টে অন্যান্য ল্যাংগুয়েজের মত try...catch ব্লক দিয়ে ইরর হ্যান্ডল করা হয়।
+
+```js
+try {
+	throw Error();
+}
+catch (e) {
+	console.log(e)
+}
+
+তবে ESNext এ catch এ কোন কিছু পাস না করলেও চলবে। যেমনঃ
+
+try {
+	throw Error();
+}
+catch {
+	console.error('ERROR');
+}
+```
+
+# 21. OBJECT fromEntries
+
+Object.entries এর ঠিক উল্টা কাজ এই Object.fromEntries মেথডটি। যদি key, value কম্বিনেশনের এ্যারের এ্যারেরকে অবজেক্টে কনভার্ট করে দিবে।
+
+```js
+const arr = [['city', 'Dhaka'], ['country', 'Bangladesh']];
+console.log(Object.fromEntries(arr));
+```
+
+# 22. STRING TRIM
+
+.trim(), .trimStart() এবং .trimEnd() মাধ্যমে কোন স্ট্রিং এর আগে-পরে, বা, শুরু এবং শেষের স্পেসকে বাদ দিতে পারি।
+
+```js
+// const str = "   What the heck is it?      ".trim();
+//const str = "   What the heck is it?      ".trimStart();
+const str = "   What the heck is it?      ".trimEnd();
+console.log(str.length, str);
+
+Output:
+20 "What the heck is it?"
+26 "What the heck is it?      "
+23 "   What the heck is it?"
+```
