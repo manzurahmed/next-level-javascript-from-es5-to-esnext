@@ -529,3 +529,21 @@ Output:
 26 "What the heck is it?      "
 23 "   What the heck is it?"
 ```
+
+# Array Helper
+
+## .map
+
+```js
+const marks = [80, 90, 95, 100, 105];
+const doubleMarks = marks.map(mark => mark * 2)
+console.log(doubleMarks);
+
+// Output:
+Array(5) [ 160, 180, 190, 200, 210 ]
+```
+
+.map কিভাবে কাজ করেঃ
+
+- .map ফাংশন ইনপুট এ্যারেকে ইটারেট করে প্রত্যেক এলিমেন্টের উপরে কাজ।
+- Array রিটার্ন করে।
