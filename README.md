@@ -532,7 +532,9 @@ Output:
 
 # Array Helper
 
-## .map
+https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter-array-methods/
+
+## .map() (Morph Array Piece-by-piece)
 
 ```js
 const marks = [80, 90, 95, 100, 105];
@@ -540,10 +542,90 @@ const doubleMarks = marks.map(mark => mark * 2)
 console.log(doubleMarks);
 
 // Output:
-Array(5) [ 160, 180, 190, 200, 210 ]
+[
+  160,
+  180,
+  190,
+  200,
+  210
+]
 ```
 
-.map কিভাবে কাজ করেঃ
+.map() কিভাবে কাজ করেঃ
 
 - .map ফাংশন ইনপুট এ্যারেকে ইটারেট করে প্রত্যেক এলিমেন্টের উপরে কাজ।
 - Array রিটার্ন করে।
+
+## .filter()
+
+Array.filter() is a very handy shortcut when we have an array of values and want to filter those values into another array, where each value in the new array is a value that passes a specific test.
+ 
+```
+const students = [
+  {
+    name: "Boops",
+    finalGrade: 80
+  },
+  {
+    name: "Kitten",
+    finalGrade: 45
+  },
+  {
+    name: "Taco",
+    finalGrade: 100
+  },
+  {
+    name: "Lucy",
+    finalGrade: 60
+  }
+]
+
+const passingStudents = students.filter((student) => {
+  return student.finalGrade >= 70
+})
+
+Output: Array
+[
+  {
+    "name": "Boops",
+    "finalGrade": 80
+  },
+  {
+    "name": "Taco",
+    "finalGrade": 100
+  }
+]
+```
+
+## .reduce()
+
+The reduce() method takes the input values of an array and returns a single value. This one is really interesting. Reduce accepts a callback function which consists of an accumulator (a value that accumulates each piece of the array, growing like a snowball), the value itself, and the index. It also takes a starting value as a second argument:
+
+```
+const fruits = ['mango','lichi','pineapple','blackberry'];
+
+const juicedFruits = fruits.reduce( ( juices, item, index, array ) => {
+  return (index < array.length - 1 ? juices += `${item}, ` : juices += `${item}`);
+}, '' );
+// return (index < array.length - 1) ? sauce += `${cook(item)}, ` : sauce += `${cook(item)}`
+console.log(juicedFruits);
+
+Output: String
+mango, lichi, pineapple, blackberry
+```
+
+
+## .find()
+
+Return first result satisfying the condition
+
+```
+const myNames = [ "m", "a", "n", "z", "u", "r", "a", "h", "m", "e", "d"];
+const results = myNames.find( (character) => {
+	if( character === 'm' ) {
+		return character;
+	}
+} 
+);
+console.log(results);
+```
