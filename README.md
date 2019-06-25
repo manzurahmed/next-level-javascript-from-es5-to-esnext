@@ -621,11 +621,6 @@ Return first result satisfying the condition
 
 ```
 const myNames = [ "m", "a", "n", "z", "u", "r", "a", "h", "m", "e", "d"];
-const results = myNames.find( (character) => {
-	if( character === 'm' ) {
-		return character;
-	}
-} 
-);
+const results = myNames.find( character => character === 'm' ? character : null );
 console.log(results);
 ```
