@@ -597,7 +597,7 @@ Output: Array
 ]
 ```
 
-## .reduce()
+## .reduce() (Grow like a Snowball)
 
 The reduce() method takes the input values of an array and returns a single value. This one is really interesting. Reduce accepts a callback function which consists of an accumulator (a value that accumulates each piece of the array, growing like a snowball), the value itself, and the index. It also takes a starting value as a second argument:
 
