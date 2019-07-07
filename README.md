@@ -536,6 +536,8 @@ https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter
 
 ## .map() (Morph Array Piece-by-piece)
 
+![.map Arrays](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
 ```js
 const marks = [80, 90, 95, 100, 105];
 const doubleMarks = marks.map(mark => mark * 2)
@@ -557,6 +559,8 @@ console.log(doubleMarks);
 - Array রিটার্ন করে।
 
 ## .filter()
+
+![.filter Arrays](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
 Array.filter() is a very handy shortcut when we have an array of values and want to filter those values into another array, where each value in the new array is a value that passes a specific test.
  
@@ -598,6 +602,8 @@ Output: Array
 ```
 
 ## .reduce() (Grow like a Snowball)
+
+![.reduce Arrays](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
 The reduce() method takes the input values of an array and returns a single value. This one is really interesting. Reduce accepts a callback function which consists of an accumulator (a value that accumulates each piece of the array, growing like a snowball), the value itself, and the index. It also takes a starting value as a second argument:
 
